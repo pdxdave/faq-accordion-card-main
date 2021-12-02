@@ -78,7 +78,7 @@ main {
 }
 
 .logo-image .cartoon {
-  background-image: url("/images/bg-pattern-mobile.svg");
+  background-image: url("../images/bg-pattern-mobile.svg");
   background-repeat: no-repeat;
   height: 120px;
   width: 240px;
@@ -185,9 +185,6 @@ main {
   }
   .logo-image .pic .box .desk_box_img {
     position: fixed;
-  }
-  .logo-image .cartoon {
-    background-image: url("/images/bg-pattern-desktop.svg");
   }
   .content {
     -webkit-box-flex: 1;
