@@ -15,169 +15,127 @@ body {
 
     font-size: 62.5%;
   }
-  h1 {
-      font-size: 2rem;
-      text-align: center;
-  }
-  p {
-      font-size: .8rem;
-    //   color: $text-grayish-blue;
-  }
-  .desk_img, .desk_box_img{
-      display: none;
-  }
   
-  main {
+main {
     width: 1440px;
     max-width: 100%;
-    height: 770px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
-    background: linear-gradient(#af67e9, #6565e7);
-
-  }
-  
+    height: 768px;
+    background: linear-gradient($soft-violet, $soft-blue);
+}
+.desk__shadow, .desk__image, .desk__box {
+    display: none;
+}
 .container {
-    
-    margin: 0 auto;
+    height: 535px;
     width: 320px;
-    max-width: 100%;
-    height: 770px;
+    margin: 110px auto 0;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     justify-content: center;
 
+    align-items: center;
 }
 
-.logo-image {
+.illustration {
     z-index: 10;
 }
-
-.logo-image .pic {
-    width: 240px;
-    height: 120px;
-    margin-bottom: -15px;
+.ill__image {
+   margin-bottom: -85px;
 }
 
-.logo-image .cartoon {
-    background-image: url('../images/bg-pattern-mobile.svg');
-    background-repeat: no-repeat;
-    height: 120px;
-    width: 240px;
-    margin-bottom: -120px;
+.ill__shadow {
+    margin-bottom: -97px;
 }
 
 .content {
     background: #fff;
-    padding-top: 130px;
-    padding-bottom: 50px;
-    border-radius: 12px;
-    width: inherit;
+    border-radius: 20px;
+    padding: 10em 10%;
 }
-       
 
-.card {
-    margin: 0 10%;
+.content h1 {
+    font-size: 2rem;
+    color: $text-very-dark;
+    text-align: center;
+    padding: .5em 0;
+}
+
+article {
     border-bottom: 1px solid $divider;
     padding: 1.5em 0;
 }
-
-.question__wrapper {
+.question {
     display: flex;
     justify-content: space-between;
-}
-
-.question {
-    font-size: .8rem;
-    color: $text-grayish-blue;
     cursor: pointer;
+    font-size: .8rem;
 }
-
-.question p:hover {
+.question:hover {
     color: $soft-red;
 }
-               
+
 .answer {
     display: none;
-}
-.answer P {
-    color: $text-grayish-blue;
-}
-.show-text .answer {
-    display: block;
     padding-top: 1em;
+    color: $text-grayish-blue;
+    font-size: .8rem;
 }
-
+.show-answer .answer{
+    display: block;
+}
 
 @media screen and (min-width: 930px){
+    .container {
+        flex-direction: row;
+        height: 535px;
+        width: 920px;
 
-    .mobile_img {
-        display: none;;
+        background: #fff;
+        overflow: hidden;
+        border-radius: 30px;
     }
-    .desk_img, .desk_box_img{
+
+    .mobile__shadow, .mobile__image {
+        display: none;
+    }
+    .desk__shadow, .desk__image, .desk__box {
         display: block;
     }
-    h1 {
-        font-size: 2rem;
-        text-align: left;
-        padding-bottom: .5em;
-    }
-    .container {
-        margin: 130px auto 0;
-        width: 920px;
-        max-width: 100%;
-        height: 510px;
-        border-radius: 30px;
 
-        background-color: #fff;
-        overflow: hidden;
-    
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .logo-image {
-        flex: 1;
+    .illustration {
         position: relative;
+        flex: 1;
+    }
+    .ill__image .desk__image {
+        width: 430px;
+        margin-left: -70px;
+        margin-bottom: -550px;
+    }
+    .ill__shadow .desk__shadow{
+        width: 700px;
+        margin-left: -340px;
+        margin-bottom: -100px;
     }
 
-    .logo-image .pic .desk_img {
+    .box {
         position: absolute;
-        width: 472px;
-        height: 359px;
-        top: -139px;
-        left: -80px;
+        top: 115px;
+        left: -95px;
     }
-    .logo-image .pic .box {
-        position: absolute;
-        z-index: 15;
-        left: -94px;
-        .desk_box_img {
-            position: fixed;
-        }
+    .box .desk__box {
+        position: fixed;
     }
 
-    // .logo-image .cartoon {
-    //     background-image: url('/images/bg-pattern-desktop.svg'); 
-    // }
-    
+
     .content {
         flex: 1;
-        padding-top: 0px;
     }
-
-    .card {
-        margin: 0 20% 0 0;
-        border-bottom: 1px solid $divider;
-        padding: 1.5em 0;
+    .content h1 {
+        font-size: 2.5rem;
+        
+        text-align: left;
+       
     }
-
-    .question p {
-        font-size: .9rem;
-    }
-
 }
-

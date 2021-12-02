@@ -1,23 +1,21 @@
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('article');
 
 cards.forEach(function(card){
 
-    const btn = card.querySelector('.question__wrapper')
+    const btn = card.querySelector('.question')
 
         btn.addEventListener('click', function(){
 
             cards.forEach(function(item){
                 if(item != card){
-                    console.log(item.firstElementChild.firstElementChild.firstElementChild)
-                    item.classList.remove('show-text');
-                    item.firstElementChild.firstElementChild.firstElementChild.style.fontWeight = 'normal';
-                    // item.firstElementChild.firstElementChild.firstElementChild.style.color = 'hsl(240, 6%, 50%)';
-                    item.firstElementChild.lastElementChild.lastElementChild.style = 'transform: rotate(0deg);';
+                    console.log(item)
+                    item.classList.remove('show-answer');
+                    item.firstElementChild.firstElementChild.firstElementChild.style.fontWeight = 'normal'
+                    item.firstElementChild.lastElementChild.lastElementChild.style = 'transform: rotate(0deg); transition: .2s ease-in-out;'
                 }
             })
-            card.classList.toggle('show-text');
-            card.firstElementChild.firstElementChild.firstElementChild.style.fontWeight = 'bold';
-            // card.firstElementChild.firstElementChild.firstElementChild.style.color = 'black';
-            card.firstElementChild.lastElementChild.lastElementChild.style = 'transform: rotate(180deg);';
+            card.classList.toggle('show-answer');
+            card.firstElementChild.firstElementChild.firstElementChild.style.fontWeight = 'bold'
+            card.firstElementChild.lastElementChild.lastElementChild.style = 'transform: rotate(180deg); transition: .2s ease-in-out;'
         })
 })
