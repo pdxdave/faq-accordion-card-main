@@ -28,7 +28,7 @@ main {
 .container {
     height: 535px;
     width: 320px;
-    margin: 110px auto 0;
+    margin: 110px auto;
 
     display: flex;
     flex-direction: column;
@@ -71,6 +71,7 @@ article {
     justify-content: space-between;
     cursor: pointer;
     font-size: .8rem;
+    width: 256px;
 }
 .question:hover {
     color: $soft-red;
@@ -78,12 +79,14 @@ article {
 
 .answer {
     display: none;
+  
     padding-top: 1em;
     color: $text-grayish-blue;
     font-size: .8rem;
 }
 .show-answer .answer{
     display: block;
+  
 }
 
 @media screen and (min-width: 930px){
@@ -128,14 +131,14 @@ article {
         position: fixed;
     }
 
-
     .content {
         flex: 1;
     }
     .content h1 {
         font-size: 2.5rem;
-        
         text-align: left;
-       
+    }
+    .question {
+        width: 100%;
     }
 }
